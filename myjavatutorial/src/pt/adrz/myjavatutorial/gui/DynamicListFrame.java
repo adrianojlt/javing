@@ -9,6 +9,8 @@ import javax.swing.ScrollPaneConstants;
 
 public class DynamicListFrame extends JFrame {
 	
+	private static final long serialVersionUID = -714113888679202764L;
+
 	// list
 	private DynamicList list;
 	
@@ -37,8 +39,8 @@ public class DynamicListFrame extends JFrame {
 	
 	private void addComp() {
 		pane = new JScrollPane(list,
-				ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
-				ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+		ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		this.getContentPane().add(pane, BorderLayout.CENTER);
 		this.getContentPane().add(list.getFilterField(), BorderLayout.NORTH);
 	}
