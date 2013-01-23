@@ -3,6 +3,7 @@ package pt.adrz.myjavatutorial.main;
 import javax.swing.JFrame;
 
 import pt.adrz.myjavatutorial.collections.Collections;
+import pt.adrz.myjavatutorial.designPatterns.DesignPatterns;
 import pt.adrz.myjavatutorial.generics.Generics;
 import pt.adrz.myjavatutorial.gui.DynamicListFrame;
 import pt.adrz.myjavatutorial.gui.GuiTmp;
@@ -21,9 +22,10 @@ public class TutorialMain {
 	public static void main(String[] args) {
 		
 		
-//		testCollections();
+		//testCollections();
+		testDesignPatterns();
 		
-		testGui();
+		//testGui();
 		//list();
 		
 //		testSwingHacks();
@@ -48,6 +50,11 @@ public class TutorialMain {
 		
 		
 		
+	}
+	
+	public static void testDesignPatterns() {
+		DesignPatterns dp = new DesignPatterns();
+		dp.tmp();
 	}
 	
 	public static void testGenerics() {

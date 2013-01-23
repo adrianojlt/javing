@@ -22,7 +22,9 @@ public class Collections {
 	}
 	
 	public void doSomething() {
+		
 		TestClass obj1, obj2;
+		
 		obj1 = new TestClass("primeiro", 	"primeiro obj");
 		obj2 = new TestClass("segundo", 	"segundo obj");
 		
