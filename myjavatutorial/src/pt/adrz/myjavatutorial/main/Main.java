@@ -14,7 +14,7 @@ import pt.adrz.myjavatutorial.swingHacks.components.TabFade;
 import pt.adrz.myjavatutorial.tmp.Calculator;
 
 
-public class TutorialMain {
+public class Main {
 
 	/**
 	 * @param args
@@ -53,8 +53,8 @@ public class TutorialMain {
 	}
 	
 	public static void testDesignPatterns() {
-		DesignPatterns dp = new DesignPatterns();
-		dp.tmp();
+		//new DesignPatterns().swingObserverPatterns();
+		new DesignPatterns().coffeDecorator();
 	}
 	
 	public static void testGenerics() {
