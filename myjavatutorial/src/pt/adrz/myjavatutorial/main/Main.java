@@ -24,36 +24,14 @@ public class Main {
 		
 		//testCollections();
 		testDesignPatterns();
-		
 		//testGui();
 		//list();
-		
-//		testSwingHacks();
-//		testCalc();
-//		testCalc();
-		
-//		Arrays arr = new Arrays();
-//		arr.test();
-		
-//		System.out.println("teste");
-//		Tmp tmp = new Tmp();
-//		System.out.println(Tmp.seven);
-//		
-//		// static field can be used without instantiate objects
-//		int soma = Tmp.sum(30, 40);
-//		
-//		// ... or can be used with instantiated objects
-//		System.out.println(tmp.sum(10, 20));
-//		
-//		SubsubClass subsubObj = new SubsubClass();
-//		MainClass mainObj = subsubObj;
-		
-		
-		
+		//testSwingHacks();
+		//testCalc();
 	}
 	
 	public static void testDesignPatterns() {
-		//new DesignPatterns().swingObserverPatterns();
+		new DesignPatterns().swingObserverPatterns();
 		new DesignPatterns().coffeDecorator();
 	}
 	
@@ -64,7 +42,7 @@ public class Main {
 	
 	public static void testCollections() {
 		Collections coll = new Collections();
-//		coll.doSomething();
+		coll.doSomething();
 		coll.test();
 		
 	}
@@ -80,15 +58,13 @@ public class Main {
 	
 	public static void testCalc() {
 		Calculator calc = new Calculator();
-		
 	}
 	
 	public static void testSwingHacks() {
 		SwingHacks swingHacks = new SwingHacks();
-//		swingHacks.blurButton();
+		swingHacks.blurButton();
+		swingHacks.tabEfects();
 		swingHacks.filteredList();
-		
-
 	}
 
 }
