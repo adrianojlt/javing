@@ -23,7 +23,8 @@ public class Main {
 		
 		
 		//testCollections();
-		testDesignPatterns();
+		//testDesignPatterns();
+		simpleCalculator();
 		//testGui();
 		//list();
 		//testSwingHacks();
@@ -56,7 +57,7 @@ public class Main {
 		DynamicListFrame listFrame = new DynamicListFrame();
 	}
 	
-	public static void testCalc() {
+	public static void simpleCalculator() {
 		Calculator calc = new Calculator();
 	}
 	
