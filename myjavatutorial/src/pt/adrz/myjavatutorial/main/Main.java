@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 
 import pt.adrz.myjavatutorial.collections.Collections;
 import pt.adrz.myjavatutorial.designPatterns.DesignPatterns;
+import pt.adrz.myjavatutorial.euler.Euler;
 import pt.adrz.myjavatutorial.generics.Generics;
 import pt.adrz.myjavatutorial.gui.DynamicListFrame;
 import pt.adrz.myjavatutorial.gui.GuiTmp;
@@ -21,19 +22,32 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		
-		
 		//testCollections();
 		//testDesignPatterns();
-		simpleCalculator();
+		//simpleCalculator();
 		//testGui();
 		//list();
 		//testSwingHacks();
 		//testCalc();
+		//tmp();
+	}
+	
+	public static void tmp() {
+		
+	}
+	
+	public void testEuler() {
+		Euler euler = new Euler();
+		//euler.p001_multiples_of_3_and_5();
 	}
 	
 	public static void testDesignPatterns() {
-		new DesignPatterns().swingObserverPatterns();
-		new DesignPatterns().coffeDecorator();
+		
+		DesignPatterns designPatterns = new DesignPatterns();
+		
+		//designPatterns.swingObserver();
+		//designPatterns.coffeDecorator();
+		designPatterns.weatherObserver();
 	}
 	
 	public static void testGenerics() {

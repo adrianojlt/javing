@@ -1,4 +1,4 @@
-package pt.adrz.myjavatutorial.designPatterns;
+package pt.adrz.myjavatutorial.designPatterns.strategy;
 
 
 
@@ -30,13 +30,7 @@ public abstract class Duck {
 
 
 
-interface FlyBehavior {
-	public void fly();
-}
 
-interface QuackBehavior {
-	public void quack();
-}
 
 class FlyWithWings implements FlyBehavior {
 	@Override
