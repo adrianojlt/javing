@@ -2,9 +2,7 @@ package pt.adrz.myjavatutorial.generics;
 
 public class Generics {
 
-	public Generics() {
-		
-	}
+	public Generics() { }
 	
 	/**
 	 * Add an object of one type to box and retrieve the same object referencing witch 
@@ -63,9 +61,4 @@ public class Generics {
 		Integer someInt = intBox.get();
 		System.out.println(someInt);
 	}
-	
-	
-	
-	
-	
 }

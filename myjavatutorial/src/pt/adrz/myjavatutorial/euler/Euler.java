@@ -2,9 +2,7 @@ package pt.adrz.myjavatutorial.euler;
 
 public class Euler {
 
-	public Euler() {
-		
-	}
+	public Euler() { }
 	
 	public static void tmp() {
 		

@@ -3,7 +3,6 @@ package pt.adrz.myjavatutorial.main;
 import javax.swing.JFrame;
 
 import pt.adrz.myjavatutorial.collections.Collections;
-import pt.adrz.myjavatutorial.designPatterns.DesignPatterns;
 import pt.adrz.myjavatutorial.euler.Euler;
 import pt.adrz.myjavatutorial.generics.Generics;
 import pt.adrz.myjavatutorial.gui.DynamicListFrame;
@@ -25,10 +24,9 @@ public class Main {
 		//testCollections();
 		//testDesignPatterns();
 		//simpleCalculator();
-		//testGui();
-		//list();
 		//testSwingHacks();
-		//testCalc();
+		//testEuler();
+		//list();
 		//tmp();
 	}
 	
@@ -36,19 +34,11 @@ public class Main {
 		
 	}
 	
-	public void testEuler() {
+	public static void testEuler() {
 		Euler euler = new Euler();
-		//euler.p001_multiples_of_3_and_5();
+		euler.p001_multiples_of_3_and_5();
 	}
 	
-	public static void testDesignPatterns() {
-		
-		DesignPatterns designPatterns = new DesignPatterns();
-		
-		//designPatterns.swingObserver();
-		//designPatterns.coffeDecorator();
-		designPatterns.weatherObserver();
-	}
 	
 	public static void testGenerics() {
 		Generics generics = new Generics();
