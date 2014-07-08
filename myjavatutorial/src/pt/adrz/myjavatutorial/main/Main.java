@@ -1,7 +1,10 @@
 package pt.adrz.myjavatutorial.main;
 
+import java.util.Date;
+
 import javax.swing.JFrame;
 
+import pt.adrz.myjavatutorial.basics.Dates;
 import pt.adrz.myjavatutorial.collections.Collections;
 import pt.adrz.myjavatutorial.euler.Euler;
 import pt.adrz.myjavatutorial.generics.Generics;
@@ -26,17 +29,32 @@ public class Main {
 		//simpleCalculator();
 		//testSwingHacks();
 		//testEuler();
+		//dates();
 		//list();
-		//tmp();
+		varIncrement();
+		tmp();
 	}
 	
 	public static void tmp() {
 		
 	}
 	
+	public static void varIncrement() {
+		int i = 1;
+		int a = i++; // add value then increment
+		int b = --i; // decrement then add i value
+		System.out.println("i = " + i + " ; a = " + a + " ; b = " + b + " ;");
+	}
+	
+	public static void dates() {
+		Dates dates = new Dates();
+		dates.temp();
+	}
+	
 	public static void testEuler() {
 		Euler euler = new Euler();
-		euler.p001_multiples_of_3_and_5();
+		Euler.p004_largest_palindrome_product();
+		//Euler.p001_multiples_of_3_and_5();
 	}
 	
 	

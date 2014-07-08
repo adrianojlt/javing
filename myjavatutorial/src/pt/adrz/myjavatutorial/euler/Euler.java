@@ -32,6 +32,47 @@ public class Euler {
 		
 		System.out.println("sum: " + sum);
 	}
+
+	public static void p004_largest_palindrome_product() {
+		
+		int header = 999;
+		
+		int decrement = header;
+		
+		int result = 0;
+		
+		int dec = header;
+
+		
+		//for ( int i = header ; i > 0 ; i-- ) { result = header*i; }
+		
+		
+		
+		boolean found = false;
+		
+		String resultString = "";
+		
+		while ( !found && header > 0 ) {
+			
+			result = header*dec;
+			resultString = Integer.toString(result);
+			
+			if ( resultString.equals(new StringBuffer(resultString).reverse().toString()) ) {
+				found = true;
+			}
+			
+			dec--;
+			//dec = header - 1;
+			
+			//result = header*dec;
+			//resultString = Integer.toString(result);
+			
+			//if ( resultString.equals(new StringBuffer(resultString).reverse().toString()) ) { found = true; }
+
+			//header--;
+		}
+		System.out.println((header) + " X " + ++dec + " = " + resultString);
+	}
 	
 	private static long fib(int n) {
 		if ( n < 2 ) return n;
