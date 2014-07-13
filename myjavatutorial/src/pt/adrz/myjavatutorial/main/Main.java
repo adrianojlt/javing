@@ -40,7 +40,7 @@ public class Main {
 	}
 	
 	public static void varIncrement() {
-		int h = 1;
+		int h = 1; // teste
 		int a = h++; // add value then increment
 		int b = --h; // decrement then add i value
 		System.out.println("h = " + h + " ; a = " + a + " ; b = " + b + " ;");
