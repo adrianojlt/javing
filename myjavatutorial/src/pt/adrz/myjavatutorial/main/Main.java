@@ -40,10 +40,10 @@ public class Main {
 	}
 	
 	public static void varIncrement() {
-		int i = 1;
-		int a = i++; // add value then increment
-		int b = --i; // decrement then add i value
-		System.out.println("i = " + i + " ; a = " + a + " ; b = " + b + " ;");
+		int k = 1;
+		int a = k++; // add value then increment
+		int b = --k; // decrement then add i value
+		System.out.println("k = " + k + " ; a = " + a + " ; b = " + b + " ;");
 	}
 	
 	public static void dates() {
