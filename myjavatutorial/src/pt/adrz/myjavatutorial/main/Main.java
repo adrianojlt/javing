@@ -31,12 +31,13 @@ public class Main {
 		//simpleCalculator();
 		//testSwingHacks();
 		//testEuler();
+		//dates();
 		//list();
 		//date_calculation();
 		//varIncrement();
 		//tmp();
 		System.out.println(divide(1000, 2));
-		
+	
 	}
 	
 	public static void tmp() {
@@ -90,12 +91,6 @@ public class Main {
 		System.out.println("days: " + days);
 	}
 	
-	public static void varIncrement() {
-		int h = 1; // teste
-		int a = h++; // add value then increment
-		int b = --h; // decrement then add i value
-		System.out.println("h = " + h + " ; a = " + a + " ; b = " + b + " ;");
-	}
 	
 	
 	
@@ -106,9 +101,19 @@ public class Main {
 		dates.temp();
 	}
 	
+	public static void varIncrement() {
+		int h = 1; // teste
+		int a = h++; // add value then increment
+		int b = --h; // decrement then add i value
+		System.out.println("h = " + h + " ; a = " + a + " ; b = " + b + " ;");
+	}
+	
+
+	
 	public static void testEuler() {
 		Euler euler = new Euler();
-		euler.p001_multiples_of_3_and_5();
+		Euler.p004_largest_palindrome_product();
+		//Euler.p001_multiples_of_3_and_5();
 	}
 	
 	
