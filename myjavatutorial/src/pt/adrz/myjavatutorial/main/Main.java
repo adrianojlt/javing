@@ -1,7 +1,12 @@
 package pt.adrz.myjavatutorial.main;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.swing.JFrame;
 
+import pt.adrz.myjavatutorial.basics.Dates;
 import pt.adrz.myjavatutorial.collections.Collections;
 import pt.adrz.myjavatutorial.euler.Euler;
 import pt.adrz.myjavatutorial.generics.Generics;
@@ -27,11 +32,78 @@ public class Main {
 		//testSwingHacks();
 		//testEuler();
 		//list();
+		//date_calculation();
+		//varIncrement();
 		//tmp();
+		System.out.println(divide(1000, 2));
+		
 	}
 	
 	public static void tmp() {
+		//String teste = "string de teste";
+		//System.out.println(teste.substring(0, 4));
+		int num_days_interval = 5;
+		float interval_millisecouds= 3014577011L;
+		float interval_days = interval_millisecouds /(1000*60*60*24);
+		System.out.println(interval_days);
 		
+		if ( interval_days >= num_days_interval ) {
+			System.out.println("true");
+		}
+	}
+	
+	public static int divide(int a, int b) {
+		
+		int sign = 1;
+		int result = 0;
+		
+		if ( b == 0 ) throw new IllegalArgumentException("nao pode ser 0");
+		
+		while ( a >= 0 ) {
+			a -= b;
+			result++;
+		}
+
+		return result;
+	}
+	
+	public static void date_calculation() {
+		
+		Date today = new Date();
+		Date date1 = new Date(); 
+		String dateString = "2014/05/15";
+
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+		
+		try {  date1 = sdf.parse(dateString); } catch (ParseException e) { e.printStackTrace(); }
+		int compVal = today.compareTo(date1);
+		
+		long interval = today.getTime() - date1.getTime();
+		
+		int days  = (int) interval / (1000*60*60*24);
+
+		System.out.println("today: " + today.toString());
+		System.out.println("date1: " + date1.toString());
+		System.out.println("compV: " + compVal);
+		System.out.println("interval (millisecounds): " + interval);
+		System.out.println("days: " + days);
+	}
+	
+	public static void varIncrement() {
+		int h = 1; // teste
+		int a = h++; // add value then increment
+		int b = --h; // decrement then add i value
+		System.out.println("h = " + h + " ; a = " + a + " ; b = " + b + " ;");
+	}
+	
+	
+	
+	
+	
+	public static void dates() {
+		Dates dates = new Dates();
+		dates.temp();
 	}
 	
 	public static void testEuler() {
