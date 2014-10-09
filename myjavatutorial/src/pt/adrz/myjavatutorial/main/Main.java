@@ -26,7 +26,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		
-		//testCollections();
+		testCollections();
 		//testDesignPatterns();
 		//simpleCalculator();
 		//testSwingHacks();
@@ -36,7 +36,7 @@ public class Main {
 		//date_calculation();
 		//varIncrement();
 		//tmp();
-		System.out.println(divide(1000, 2));
+		//System.out.println(divide(1000, 2));
 	
 	}
 	
@@ -124,8 +124,9 @@ public class Main {
 	
 	public static void testCollections() {
 		Collections coll = new Collections();
-		coll.doSomething();
-		coll.test();
+		coll.hash();
+		//coll.doSomething();
+		//coll.test();
 		
 	}
 	

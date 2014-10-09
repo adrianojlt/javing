@@ -1,5 +1,6 @@
 package pt.adrz.myjavatutorial.collections;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -51,7 +52,26 @@ public class Collections {
 		System.out.println(set);
 		set.add("new");
 		System.out.println(set);
+	}
+	
+	public void hash() {
 		
+		Collection<Person> persons = new ArrayList<Person>();
+		persons.add(new Person(1));
+		persons.add(new Person(2));
+		Person p3 = new Person(3);
+		persons.add(p3);
+		Person p4 = new Person(4);
+		if (persons.contains(p4)) 
+			System.out.println("contains");
+	}
+	
+	public class Person {
+		
+		private int id;
+		public Person(int id) { this.id = id; }
+		public int getId() { return id; }
+		public void setId(int id) { this.id = id; }
 	}
 	
 	
