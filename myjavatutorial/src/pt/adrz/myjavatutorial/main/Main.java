@@ -7,6 +7,7 @@ import java.util.Date;
 import javax.swing.JFrame;
 
 import pt.adrz.myjavatutorial.basics.Dates;
+import pt.adrz.myjavatutorial.challenges.Simple;
 import pt.adrz.myjavatutorial.collections.Collections;
 import pt.adrz.myjavatutorial.euler.Euler;
 import pt.adrz.myjavatutorial.generics.Generics;
@@ -51,6 +52,11 @@ public class Main {
 		if ( interval_days >= num_days_interval ) {
 			System.out.println("true");
 		}
+	}
+	
+	public static void challenges() {
+	
+		//Simple.remove_extra_consecutive("aaab", 2);
 	}
 	
 	public static int divide(int a, int b) {

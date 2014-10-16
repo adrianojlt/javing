@@ -5,13 +5,23 @@ public class Diagram {
 	public class Dependency {
 		
 		// ... here we see a DEPENDENCY because a class reference is passed as 
-		// a method parameter ...
+		// a method parameter. This class dont own a B instance
 		public void doSomething(B b) {
 			// do something with b ...
 		}
 	}
 	
+	// Agregation and composition are special types of ASSOCIATION ...
+	public class Association {
+
+		private B b;
+		
+		public B getB() { return this.b; }
+	}
+	
 	// Agregation is the weaker form of object containment (one object contains other objects)
+	// When this instance goes out of scope (e.g garbage collected) the b instance
+	// does not (of necessity) go out of scope.
 	public class Aggregation {
 		
 		private B b;
