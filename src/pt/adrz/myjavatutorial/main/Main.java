@@ -1,5 +1,6 @@
 package pt.adrz.myjavatutorial.main;
 
+import java.text.Normalizer;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -27,7 +28,7 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		
-		testCollections();
+		//testCollections();
 		//testDesignPatterns();
 		//simpleCalculator();
 		//testSwingHacks();
@@ -36,23 +37,29 @@ public class Main {
 		//list();
 		//date_calculation();
 		//varIncrement();
-		//tmp();
+		tmp();
 		//System.out.println(divide(1000, 2));
 	
 	}
 	
 	public static void tmp() {
-		//String teste = "string de teste";
-		//System.out.println(teste.substring(0, 4));
-		int num_days_interval = 5;
-		float interval_millisecouds= 3014577011L;
-		float interval_days = interval_millisecouds /(1000*60*60*24);
-		System.out.println(interval_days);
 		
-		if ( interval_days >= num_days_interval ) {
-			System.out.println("true");
-		}
+		String test = "áaaabãõç";
+		String result = null;
+		//result = Normalizer.normalize(test, Normalizer.Form.NFD);
+		result = flattenToAscii(test);
+
+		System.out.println(result);
 	}
+	
+	public static String flattenToAscii(String string) {
+        StringBuilder sb = new StringBuilder(string.length());
+        string = Normalizer.normalize(string, Normalizer.Form.NFD);
+        for (char c : string.toCharArray()) {
+            if (c <= '\u007F') sb.append(c);
+        }
+        return sb.toString();
+    }
 	
 	public static void challenges() {
 	
@@ -117,7 +124,6 @@ public class Main {
 
 	
 	public static void testEuler() {
-		Euler euler = new Euler();
 		Euler.p004_largest_palindrome_product();
 		//Euler.p001_multiples_of_3_and_5();
 	}
