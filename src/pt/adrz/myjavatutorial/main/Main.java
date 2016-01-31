@@ -37,12 +37,18 @@ public class Main {
 		//list();
 		//date_calculation();
 		//varIncrement();
-		tmp();
+		specialChars();
 		//System.out.println(divide(1000, 2));
 	
 	}
 	
-	public static void tmp() {
+	public static void splite() {
+		
+		String tmp ="9112478763|10113|33845857|billing";
+
+	}
+
+	public static void specialChars() {
 		
 		String test = "áaaabãõç";
 		String result = null;
