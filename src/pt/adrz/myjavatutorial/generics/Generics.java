@@ -37,6 +37,7 @@ public class Generics {
 		Box intBox = new Box();
 		
 		// lets try inserting a String :P
+		intBox.add(234);
 		intBox.add("10");
 		
 		// ... and lets try to get an Integer

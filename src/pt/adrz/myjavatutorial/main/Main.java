@@ -4,6 +4,7 @@ import java.text.Normalizer;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Properties;
 
 import javax.swing.JFrame;
 
@@ -31,13 +32,13 @@ public class Main {
 		//testCollections();
 		//testDesignPatterns();
 		//simpleCalculator();
-		//testSwingHacks();
+		testSwingHacks();
 		//testEuler();
 		//dates();
 		//list();
 		//date_calculation();
 		//varIncrement();
-		tmp();
+		//tmp();
 		//System.out.println(divide(1000, 2));
 	
 	}
@@ -103,9 +104,30 @@ public class Main {
 		System.out.println("interval (millisecounds): " + interval);
 		System.out.println("days: " + days);
 	}
-	
-	
-	
+
+	public static void split() {
+
+		String cenas = "10113|billing|250|8473772";
+
+		String[] parts = cenas.split("[|]");
+
+		System.out.println(parts[0]);
+		System.out.println(parts[1]);
+		System.out.println(parts[2]);
+		System.out.println(parts[3]);
+
+		String serviceid = "14444";
+
+		Properties prop = new Properties();
+		prop.setProperty("service.id.14444", "10789");
+
+		String val = "service.id" + serviceid;
+		System.out.println(val);
+		String subOptString = prop.getProperty("service.id." + serviceid);
+
+		int subOptId = Integer.parseInt(prop.getProperty("service.id." + serviceid));
+		System.out.println(subOptId);
+	}
 	
 	
 	

@@ -75,7 +75,11 @@ public class Euler {
 	}
 	
 	private static long fib(int n) {
-		if ( n < 2 ) return n;
-		else return fib(n-1) + fib(n-2);
+
+		if ( n < 2 ) {
+			return n;
+		}
+
+		return fib(n-1) + fib(n-2);
 	}
 }
