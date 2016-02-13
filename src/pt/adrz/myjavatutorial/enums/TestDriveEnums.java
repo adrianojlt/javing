@@ -7,6 +7,7 @@ public class TestDriveEnums {
 		testOperations();
 		testPayrollDay();
 		testExample();
+		testStatus();
 	}
 	
 	private static void testPlanets() {
@@ -30,12 +31,21 @@ public class TestDriveEnums {
 	}
 	
 	private static void testPayrollDay() {
+
 		double total = PayrollDay.FRIDAY.pay(10, 1);
 		System.out.println("total pay = " + total);
 	}
 
 	private static void testExample() {
+
 		Level example = Level.NORMAL;
 		System.out.println("Level code: " + example.getLevelCode());
+	}
+	
+	private static void testStatus() {
+
+        System.out.println(Status.PASSED);
+        System.out.println(Status.getStatus(-1));
+        System.out.println(Status.getStatus(0));
 	}
 }
