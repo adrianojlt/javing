@@ -1,4 +1,4 @@
-package pt.adrz.myjavatutorial.euler;
+package pt.adrz.myjavatutorial.challenges.euler;
 
 public class Euler {
 

@@ -9,8 +9,8 @@ import javax.swing.JFrame;
 
 import pt.adrz.myjavatutorial.basics.Dates;
 import pt.adrz.myjavatutorial.challenges.Simple;
+import pt.adrz.myjavatutorial.challenges.euler.Euler;
 import pt.adrz.myjavatutorial.collections.Collections;
-import pt.adrz.myjavatutorial.euler.Euler;
 import pt.adrz.myjavatutorial.generics.Generics;
 import pt.adrz.myjavatutorial.gui.DynamicListFrame;
 import pt.adrz.myjavatutorial.gui.GuiTmp;
