@@ -4,10 +4,19 @@ public class TestDriveEnums {
 
 	public static void main(String[] args) {
 		testPlanets();
-		testOperations();
-		testPayrollDay();
-		testExample();
+//		testOperations();
+//		testPayrollDay();
+//		testExample();
 		testStatus();
+//		testFieldType();
+	}
+	
+	private static void testFieldType() {
+		
+		String fieldName = "password";
+		String fieldValue = "1234";
+		FieldType field = FieldType.lookup(fieldName);
+		System.out.println(field.getFieldName() + "(\"" + fieldValue + "\") valid: " + field.validate(fieldValue));
 	}
 	
 	private static void testPlanets() {

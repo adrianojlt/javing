@@ -45,6 +45,10 @@ public enum FieldType {
 
 	private static final Map<String,FieldType> nameToFieldTypeMap = new HashMap<String, FieldType>();
 	
+	public static FieldType lookup(String fieldName) {
+		return nameToFieldTypeMap.get(fieldName.toLowerCase());
+	}
+	
 	static {
 		for ( FieldType field : FieldType.values() ) {
 			nameToFieldTypeMap.put(field.getFieldName(), field);
