@@ -15,10 +15,6 @@ import pt.adrz.myjavatutorial.swingHacks.components.SwingHacks;
 import pt.adrz.myjavatutorial.tmp.Calculator;
 
 
-
-
-
-
 public class Main {
 
 	/**
