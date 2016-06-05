@@ -48,7 +48,7 @@ public class Generics {
 	}
 	
 	/**
-	 * Now we are going to use BoxGenerics, we define witch type of that this obj 
+	 * Now we are going to use BoxGenerics, we define witch type the object 
 	 * if going to receive.
 	 */
 	public void tryBox3() {

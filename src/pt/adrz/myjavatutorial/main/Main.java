@@ -11,7 +11,7 @@ import pt.adrz.myjavatutorial.euler.Euler;
 import pt.adrz.myjavatutorial.generics.Generics;
 import pt.adrz.myjavatutorial.gui.DynamicListFrame;
 import pt.adrz.myjavatutorial.gui.GuiTmp;
-import pt.adrz.myjavatutorial.swingHacks.components.SwingHacks;
+import pt.adrz.myjavatutorial.swing.hacks.components.SwingHacks;
 import pt.adrz.myjavatutorial.tmp.Calculator;
 
 

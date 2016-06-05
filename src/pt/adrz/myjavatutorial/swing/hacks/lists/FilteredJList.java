@@ -1,4 +1,4 @@
-package pt.adrz.myjavatutorial.swingHacks.lists;
+package pt.adrz.myjavatutorial.swing.hacks.lists;
 
 import java.util.ArrayList;
 

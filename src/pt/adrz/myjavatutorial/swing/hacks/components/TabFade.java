@@ -1,4 +1,4 @@
-package pt.adrz.myjavatutorial.swingHacks.components;
+package pt.adrz.myjavatutorial.swing.hacks.components;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;

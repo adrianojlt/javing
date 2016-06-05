@@ -1,4 +1,4 @@
-package pt.adrz.myjavatutorial.swingHacks.components;
+package pt.adrz.myjavatutorial.swing.hacks.components;
 
 import java.awt.BorderLayout;
 
@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 
-import pt.adrz.myjavatutorial.swingHacks.lists.FilteredJList;
+import pt.adrz.myjavatutorial.swing.hacks.lists.FilteredJList;
 
 public class SwingHacks {
 

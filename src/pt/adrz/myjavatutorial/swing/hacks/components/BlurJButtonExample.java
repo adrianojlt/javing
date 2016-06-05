@@ -1,4 +1,4 @@
-package pt.adrz.myjavatutorial.swingHacks.components;
+package pt.adrz.myjavatutorial.swing.hacks.components;
 
 import java.awt.Graphics;
 import java.awt.Image;
