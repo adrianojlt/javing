@@ -3,7 +3,9 @@ package pt.adrz.myjavatutorial.collections;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Set;
 
 public class Collections {
@@ -12,7 +14,32 @@ public class Collections {
 	
 	LinkedList<TestClass> objList;
 	
+	public static void main(String[] args) {
+		Collections col = new Collections();
+		col.linkedList();
+	}
 	
+	public void linkedList() {
+
+
+		ArrayList<Integer> aist = new ArrayList<Integer>();
+		LinkedList<Integer> list = new LinkedList<Integer>();
+
+		list.add(10);
+		list.add(20);
+		list.add(30);
+
+		System.out.println(list.pollFirst());
+		java.util.Collections.sort(list);
+
+		Iterator<Integer> it = list.iterator();
+		
+		while ( it.hasNext() ) {
+			System.out.println(it.next());
+		}
+		
+		System.out.println( list.contains(300));
+	}
 	
 	public Collections() {
 		stringList = new LinkedList<String>();

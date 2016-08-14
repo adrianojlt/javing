@@ -6,7 +6,8 @@ public class Strings {
 
 	public static void main(String[] args) {
 		//messageFormatExample();
-		stringMemory();
+		//stringMemory();
+		compareStrings();
 	}
 	
 	public static void messageFormatExample() {
@@ -25,7 +26,7 @@ public class Strings {
 	
 	public static void stringMemory() {
 		
-		// String literal stored in runtime constant pool
+		// String literal stored in runtime constant pool (string pool)
 		String s1 = "asdf";
 		String s2 = "asdf";
 
@@ -35,5 +36,21 @@ public class Strings {
 
 		System.out.println(s1==s2); // true
 		System.out.println(s3==s4); // false
+	}
+	
+	public static void compareStrings() {
+
+		String x = "100";
+		String y = x;
+		x += 5;
+		
+		StringBuffer s1 = new StringBuffer("100");
+		StringBuffer s2 = s1;
+		s1.append("5");
+		
+		System.out.println(x==y);	// false
+		System.out.println(y);
+		System.out.println(s1==s2); // true
+		System.out.println(s1);
 	}
 }

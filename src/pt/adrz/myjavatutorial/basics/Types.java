@@ -85,6 +85,10 @@ public class Types {
 		long result = x*y;
 	}
 	
+	public static void temp() {
+		
+	}
+	
 	public static void main(String[] args) {
 		//stringInMemory();
 		//operationOverloaded();
