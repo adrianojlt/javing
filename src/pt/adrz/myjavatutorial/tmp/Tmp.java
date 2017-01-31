@@ -1,5 +1,7 @@
 package pt.adrz.myjavatutorial.tmp;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.ArrayList;
@@ -13,7 +15,37 @@ public class Tmp {
 		
 		//example();
 		//tmp();
-		teste();
+		increment();
+		//teste();
+		//input();
+	}
+	
+	public static void increment() {
+		int a = 10;
+		System.out.println("the value of a " + a++ );
+		System.out.println("now a is " + a );
+	}
+	
+	public static void input() {
+		
+		BufferedReader br = null;
+		try {
+			br = new BufferedReader(new InputStreamReader(System.in));
+			String xStr = br.readLine();
+			String yStr = br.readLine();
+			Integer result = Integer.parseInt(xStr)/Integer.parseInt(yStr);
+			System.out.println(result);
+		}
+		catch (NumberFormatException ne) {
+			System.out.println("java.util.InputMismatchException");
+		}
+		catch (ArithmeticException ae) {
+			System.out.println("java.lang.ArithmeticException: / by zero");
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
 	}
 	
 	public static void teste() {
@@ -39,12 +71,12 @@ public class Tmp {
 	}
 	
 	public static void tmp() {
-		String isit = "TRUEi";
 		
+		int a  = 100;
+		String b = "110";
 		
-		if (Boolean.parseBoolean(isit))  {
-			System.out.println("isit");
-		}
+		boolean c =  b.equals(a+"");
+		System.out.println(c);
 	}
 	
 	public static void example() {
