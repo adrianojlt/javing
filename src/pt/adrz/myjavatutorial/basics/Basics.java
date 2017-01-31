@@ -1,5 +1,8 @@
 package pt.adrz.myjavatutorial.basics;
 
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+
 public class Basics {
 
 	public Basics() { }
@@ -24,6 +27,19 @@ public class Basics {
 		c.setAttribute("c");
 	}
 	
+	public static void main(String[] args) { 
+		try {
+			Foo foo  = new Foo("asdf");
+			Method method = foo.getClass().getMethod("getAttribute", null);
+			Field field = foo.getClass().getFields()[0];
+			method.setAccessible(true);
+			String output = (String) method.invoke(foo, null);
+			System.out.println(output);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 }
 
 class Foo {
@@ -41,4 +57,6 @@ class Foo {
 	public void setAttribute(String attribute) {
 		this.attribute = attribute;
 	}
+	
+	
 }
