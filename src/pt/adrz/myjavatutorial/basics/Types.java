@@ -23,6 +23,10 @@ public class Types {
 		String s4 = new String("abc");
 
 		System.out.println(s3 == s4); // Output : false
+		
+		String s5 = new String("abc").intern(); // force JVM to add this to the String Pool
+		
+		System.out.println(s2 == s5); // Output : true
 	}
 	
 	public static void operationOverloaded() {
@@ -146,12 +150,12 @@ public class Types {
 	}
 	
 	public static void main(String[] args) {
-		//stringInMemory();
+		stringInMemory();
 		//operationOverloaded();
 		//intWrapper();
 		//typeRange();
 		//numericPromotion();
-		playWithString();
+		//playWithString();
 		//temp();
 	}
 }
