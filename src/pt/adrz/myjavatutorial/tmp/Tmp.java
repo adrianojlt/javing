@@ -8,8 +8,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.IntStream;
 
 public class Tmp {
 	
@@ -19,9 +21,232 @@ public class Tmp {
 		//tmp();
 		//increment();
 		//invert();
-		testPairs();
+		//testPairs();
 		//teste();
 		//input();
+		//testSherlock();
+		//testMinMax();
+		testBalancedBrackets();
+	}
+	
+	public static void testBalancedBrackets() {
+		
+		String ex01 = "()";
+		String ex02 = "({})";
+		String ex03 = "({}])";
+		String ex04 = "()[]";
+		String ex05 = "((())())";
+		String ex06 = "{[(])}";
+		String ex07 = "{[";
+		
+		
+		//System.out.println(balancedBrackets(ex06));
+		System.out.println(balancedBracketsWithStack(ex05));
+	}
+	
+	public static String balancedBracketsWithStack(String expression) {
+		//if (expression.length() == 1)
+		char[] brackets = expression.toCharArray();
+		Stack<Character> s = new Stack<>();
+		for (char b : brackets)
+			switch (b) {
+				case '{': s.push('}'); break;
+				case '(': s.push(')'); break;
+				case '[': s.push(']'); break;
+					
+	
+				default:
+					if (s.empty() || b != s.pop())
+						return "NO";
+			}
+	
+ 		if ( s.empty() )
+ 			return "YES";
+ 		
+		return "NO";
+	}
+	
+	public static boolean match(String a, String b) {
+
+		if ( a.equals("(") && b.equals(")"))
+			return true;
+		if ( a.equals("[") && b.equals("]"))
+			return true;
+		if ( a.equals("{") && b.equals("}")) 
+			return true;
+			
+		return false;
+	}
+	
+	public static String balancedBrackets(String test) {
+		
+		String[] brackets = test.split("");
+		
+		//int i = 0;
+		//int j = brackets.length-1;
+		
+		int round = 0;
+		int curly = 0;
+		int square = 0;
+		
+		for (int k = 0 ; k < brackets.length ; k++ ) {
+			
+			if ( brackets[k].equals("(")) {
+				round++;
+			}
+			
+			if ( brackets[k].equals(")")) {
+				round--;
+			}
+			
+			if ( brackets[k].equals("{")) {
+				curly++;
+			}
+			
+			if ( brackets[k].equals("}")) {
+				curly--;
+			}
+			if ( brackets[k].equals("[")) {
+				square++;
+			}
+			if ( brackets[k].equals("]")) {
+				square--;
+			}
+		}
+		
+		if ( round == 0 && curly == 0 && square == 0)
+			return "YES";
+		
+		return "NO";
+		
+		/*
+		while ( i < j ) {
+			if (match(brackets[i],brackets[j])) {
+				i++;
+				j--;
+			}
+			else {
+				i++;
+				j = i+1;
+			}
+		}
+		System.out.println(i);
+		System.out.println(j);
+		
+		if ( i > j )
+			return "YES";
+		
+		return "NO";
+		*/
+	}
+	
+	static void testMinMax() {
+		int arr01[] = {1,2,3,4,5};
+		int arr02[] = {5,5,5,5,5};
+		long arr03[] = {256741038, 623958417, 467905213, 714532089, 938071625};
+		minMax(arr03);
+		
+	}
+	
+	static void minMax(long[] a) {
+		long sum = 0;
+		long min = a[0];
+		long max = a[0];
+		
+		for (int i = 0 ; i < a.length ; i++ ) {
+			sum += a[i];
+			
+			if ( a[i] < min )
+				min = a[i];
+			
+			if ( a[i] > max )
+				max = a[i];
+			
+			
+			
+		}
+		System.out.println("min: " + min);
+		System.out.println("max: " + max);
+		System.out.println((sum-max) + " " + (sum - min));
+	}
+	
+	
+	public static void testSherlock() {
+		int arr[] = {2,2,4,2,2};
+		int arr02[] = {1,2,3,4};
+		int arr03[] = {2,2,4,4};
+		int arr04[] = {10};
+		int arr05[] = {1,1,1};
+		//System.out.println(sherlock(arr05));
+		System.out.println(solve(arr02));
+	}
+	
+	static String solve(int[] a) {
+        int len =a.length;
+        int j=len-1;
+        int i=0, sum1=0, sum2=0;
+        while(i<len && j>=0){
+            if(sum1==sum2 && ((i-j)==0)){
+                return "YES";
+            }else if(sum1<sum2){
+                sum1+=a[i++];
+            }else{
+                sum2+=a[j--];
+            }
+        }
+        return "NO";
+    }
+	
+	public static String sherlock(int[] a) {
+		
+		int left[] = null;
+		int right[] = null;
+		int total = IntStream.of(a).sum();
+		
+		for (int i = 1 ; i < a.length - 1 ; i++ ) {
+			
+			left = Arrays.copyOfRange(a, 0, i);
+			right = Arrays.copyOfRange(a, i + 1, a.length);
+			
+			int leftSum = 0;
+			int rightSum = 0;
+			
+			if ( left.length <= right.length ) {
+				leftSum = IntStream.of(left).sum();
+				rightSum = total - leftSum - a[i];
+			}
+			else {
+				rightSum = IntStream.of(right).sum();
+				leftSum = total - rightSum - a[i];
+			}
+			
+			
+			System.out.println(Arrays.toString(left));
+			System.out.println(Arrays.toString(right));
+			
+			//int leftSum = IntStream.of(left).sum();
+			//int rightSum = IntStream.of(right).sum();
+			
+			System.out.println("left: " + leftSum);
+			System.out.println("right: " + rightSum);
+			System.out.println("a[i]: " + a[i]);
+			
+			if ( leftSum == rightSum )
+				return "Yes";
+		}
+		
+		return "No";
+		
+		//System.out.println(Arrays.toString(left));
+		//System.out.println(Arrays.toString(right));
+		
+		
+		
+		
+		
+		//System.out.println("left: " + leftSum);
+		//System.out.println("right: " + rightSum);
+		
 		
 		
 	}
@@ -33,38 +258,50 @@ public class Tmp {
 		System.out.println(res);
 	}
 	
-	//static 
+	public static int pairsWhile(int k, int[] arr) {
+			
+		int total = 0;
+		Arrays.sort(arr);
+	
+		int i = 0;
+		int j = 1;
+		
+		while ( j <arr.length ) {
+			int diff = arr[j] - arr[i];
+	        if (diff == k) {
+	            total++;
+	            j++;
+	        } else if (diff > k) {
+	            i++;
+	            if (i == j) {
+	                j++;
+	            }
+	        } else if (diff < k) {
+	            j++;
+	        }
+		}
+		
+		return total;
+	}
+	
 	public static int pairs(int k, int[] arr) {
 		
-		HashMap<Integer, Integer> hm = new HashMap<Integer,Integer>();
-		
-		//hm.containsKey(arg0)
-		//hm.put(2, 3);
 		int total = 0;
+		Arrays.sort(arr);
 		
 		for (int i = 0 ; i < arr.length ; i++ ) {
 			for (int z = i + 1 ; z < arr.length ; z++ ) {
 				
-				int diff = Math.abs(arr[i] - arr[z]);
+				int diff = arr[z] - arr[i];
 				
 				if ( diff == k ) {
 					total++;
+					break;
 				}
 				
-				//if ( hm.containsKey(diff) ) {
-					//hm.put(diff, hm.get(diff) + 1);
-				//}
-				//arr[i] - arr[z];
 			}
 		}
-		
-		//System.out.println(Arrays.asList(hm)); 
-		
-		/*
-		for (int i : arr) {
-			
-		}*/
-		
+
 		return total;
 	}
 	
