@@ -7,35 +7,26 @@ public class Reference {
 	public Reference(String field) {
 		this.field = field;
 	}
-	
-	public static void main(String[] args) {
 
-		Reference ref = new Reference("first Object");
-
-		System.out.println(ref.field);
-		changeValue(ref);
-		System.out.println(ref.field);
-		changeWithInstance(ref);
-		System.out.println(ref.field);
-
-	}
-	
 	/**
 	 * Java is always pass-by-value and not by reference
 	 * Here a new instance (address memory assigned to 'ref') is created 
 	 * if Java was passed by reference the argument object would be changed, instead
-	 * only the value of that variable ( address memory) is changed
+	 * only the value of that variable ( address memory ) is changed
 	 * @param ref
 	 */
-	public static void changeWithInstance(Reference ref) {
+	public static Reference changeWithInstance(Reference ref) {
 		ref = new Reference("new instance");
+		return ref;
 	}
 	
 	/**
-	 * Here the object referenced by variable 'ref' is modified
+	 * 'ref' is passed by value.
+	 * any change to var 'ref' will be done only in the scope of this function.
+	 * But we can change what is inside the object.
 	 * @param ref
 	 */
-	public static void changeValue(Reference ref) {
-		ref.field = "changed field";
+	public static void changeValue(Reference ref, String value) {
+		ref.field = value;
 	}
 }

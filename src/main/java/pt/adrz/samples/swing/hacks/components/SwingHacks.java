@@ -6,8 +6,6 @@ import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 
-import pt.adrz.myjavatutorial.swing.hacks.lists.FilteredJList;
-
 public class SwingHacks {
 
 	/**
@@ -39,20 +37,20 @@ public class SwingHacks {
 		};
 		JFrame frame = new JFrame("Filtered List");
 		frame.getContentPane().setLayout(new BorderLayout());
-		FilteredJList list = new FilteredJList();
-		for (int i=0; i<listItems.length; i++)
-            list.addItem (listItems[i]);
-        // add to gui
-        JScrollPane pane =
-            new JScrollPane (list,
-                             ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
-                             ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        frame.getContentPane().add (pane, BorderLayout.CENTER);
-        frame.getContentPane().add (list.getFilterField(),
-                                    BorderLayout.NORTH);
-        frame.pack();
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setVisible(true);
+//		FilteredJList list = new FilteredJList();
+//		for (int i=0; i<listItems.length; i++)
+//            list.addItem (listItems[i]);
+//        // add to gui
+//        JScrollPane pane =
+//            new JScrollPane (list,
+//                             ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+//                             ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+//        frame.getContentPane().add (pane, BorderLayout.CENTER);
+//        frame.getContentPane().add (list.getFilterField(),
+//                                    BorderLayout.NORTH);
+//        frame.pack();
+//        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+//        frame.setVisible(true);
 	}
 	
 }

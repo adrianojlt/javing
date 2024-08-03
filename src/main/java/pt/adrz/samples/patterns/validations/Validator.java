@@ -1,4 +1,4 @@
-package pt.adrz.samples.patterns;
+package pt.adrz.samples.patterns.validations;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,13 +6,13 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 public class Validator {
-	
+
 	private static String EMAIL_PATTERN = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 
-	private List<String> forbiddenDomains = Arrays.asList("domain1", "domain2");
+	private final List<String> forbiddenDomains = Arrays.asList("domain1", "domain2");
 	
 	public void chunky_register(String email, String name, int age) {
-		
+
 		Pattern pattern = Pattern.compile(EMAIL_PATTERN);
 		
 		if ( email == null || email.trim().equals("")){
@@ -38,7 +38,9 @@ public class Validator {
 	public void clean_register(RegistrationData regData) {
 
 		List<RegistrationRule> rules = new ArrayList<RegistrationRule>();
+
 		rules.add(new EmailValidationRule());
+		rules.add(new EmailEmptinessRule());
 
 		/*
 		rules.add(new EmailEmptinessRule());

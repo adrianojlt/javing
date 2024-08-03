@@ -1,4 +1,4 @@
-package pt.adrz.samples.patterns;
+package pt.adrz.samples.patterns.validations;
 
 public class RegistrationData {
 	

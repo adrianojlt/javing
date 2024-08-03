@@ -5,14 +5,14 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import pt.adrz.myjavatutorial.basics.Dates;
-import pt.adrz.myjavatutorial.collections.Collections;
-import pt.adrz.myjavatutorial.euler.Euler;
-import pt.adrz.myjavatutorial.generics.Generics;
-import pt.adrz.myjavatutorial.gui.DynamicListFrame;
-import pt.adrz.myjavatutorial.gui.GuiTmp;
-import pt.adrz.myjavatutorial.swing.hacks.components.SwingHacks;
-import pt.adrz.myjavatutorial.tmp.Calculator;
+import pt.adrz.samples.basics.Dates;
+import pt.adrz.samples.collections.Collections;
+import pt.adrz.samples.euler.Euler;
+import pt.adrz.samples.generics.Generics;
+import pt.adrz.samples.gui.DynamicListFrame;
+import pt.adrz.samples.gui.GuiTmp;
+import pt.adrz.samples.swing.hacks.components.SwingHacks;
+import pt.adrz.samples.tmp.Calculator;
 
 
 public class Main {

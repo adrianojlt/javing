@@ -1,34 +1,7 @@
 package pt.adrz.samples.basics;
 
 public class Types {
-	
-	/**
-	 * Whenever you create a string object using string literal, 
-	 * that object is stored in the string constant pool and whenever you create a string object using new keyword 
-	 * such object is stored in the heap memory.
-	 */
-	public static void stringInMemory() {
-		
-		// Creating string objects using literals
-		// Here Strings are created in the String Pool
-		String s1 = "abc";
-		String s2 = "abc";
 
-		System.out.println(s1 == s2); // Output : true
-
-		// Creating string objects using new operator
-		// Here you are saying: "No, JVM. I dont want to use the 
-		// String pool. Create instead a new String object
-		String s3 = new String("abc");
-		String s4 = new String("abc");
-
-		System.out.println(s3 == s4); // Output : false
-		
-		String s5 = new String("abc").intern(); // force JVM to add this to the String Pool
-		
-		System.out.println(s2 == s5); // Output : true
-	}
-	
 	public static void operationOverloaded() {
 
 		int one = 1;
@@ -147,15 +120,5 @@ public class Types {
 	
 	public static void temp() {
 		
-	}
-	
-	public static void main(String[] args) {
-		stringInMemory();
-		//operationOverloaded();
-		//intWrapper();
-		//typeRange();
-		//numericPromotion();
-		//playWithString();
-		//temp();
 	}
 }
