@@ -18,8 +18,8 @@ public class StringsTests {
 
         assertNotSame(x, y);
         assertSame(s1, s2);
-        assertEquals(s1.toString(), "1005");
-        assertEquals(s2.toString(), "1005");
+        assertEquals("1005", s1.toString());
+        assertEquals("1005", s2.toString());
     }
 
     /**
@@ -50,7 +50,7 @@ public class StringsTests {
         assertSame(s1, s5);
         assertEquals(s1, "asdf");
         assertEquals(s2, "asdf");
-        assertEquals(s3, "asdf");
-        assertEquals(s4, "asdf");
+        assertEquals("asdf", s3);
+        assertEquals("asdf", s4);
     }
 }

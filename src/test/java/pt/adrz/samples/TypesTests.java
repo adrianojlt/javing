@@ -14,7 +14,8 @@ public class TypesTests {
         Reference newRef = Reference.changeWithInstance(ref);
 
         assertNotEquals(ref, newRef);
-        assertEquals(ref.field, "first Object");
+        assertEquals("first Object", ref.field);
+        assertEquals("new instance", newRef.field);
     }
 
     @Test
@@ -24,7 +25,7 @@ public class TypesTests {
 
         Reference.changeValue(ref, "new value");
 
-        assertNotEquals(ref.field, "first Object");
-        assertEquals(ref.field, "new value");
+        assertNotEquals("first Object", ref.field);
+        assertEquals("new value", ref.field);
     }
 }
