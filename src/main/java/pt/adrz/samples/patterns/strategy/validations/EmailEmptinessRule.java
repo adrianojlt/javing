@@ -1,4 +1,4 @@
-package pt.adrz.samples.patterns.validations;
+package pt.adrz.samples.patterns.strategy.validations;
 
 public class EmailEmptinessRule implements RegistrationRule {
 

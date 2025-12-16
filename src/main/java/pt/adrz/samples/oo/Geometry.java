@@ -1,28 +1,25 @@
 package pt.adrz.samples.oo;
 
 public class Geometry {
+
 	public final double PI = 3.142592653;
 	
 	public double area(Object shape) {
 
-		if ( shape instanceof Square ) {
-			Square s = (Square)shape;
-			return s.side * s.side;
+		if (shape instanceof Square s) {
+            return s.side * s.side;
 		}
 		
-		if ( shape instanceof Rectangle ) {
-			Rectangle rect = (Rectangle)shape;
-			return rect.height * rect.width;
+		if (shape instanceof Rectangle rectangle) {
+            return rectangle.height * rectangle.width;
 		}
 
-		if ( shape instanceof Circle ) {
-			Circle circ = (Circle)shape;
-			return PI * circ.radius * circ.radius;
+		if (shape instanceof Circle circle) {
+            return PI * circle.radius * circle.radius;
 		}
 		
 		return 0;
 	}
-
 }
 
 

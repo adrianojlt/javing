@@ -1,12 +1,29 @@
 package pt.adrz.samples.challenges;
 
-import java.util.Arrays;
-import java.util.BitSet;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 public class Simple {
+
+
+	public static Map<String, List<String>> getAnagrams(List<String> words) {
+
+		Map<String, List<String>> map = new HashMap<>();
+
+		for (String word : words) {
+
+			char[] chars = word.toCharArray();
+			Arrays.sort(chars);
+			String key = new String(chars);
+
+			if (!map.containsKey(key)) {
+				map.put(key, new ArrayList<>());
+			}
+
+			map.get(key).add(word);
+		}
+
+		return map;
+	}
 	
 	/**
 	 * Write a function that takes two parameters, a string and an integer. 
